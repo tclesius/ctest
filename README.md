@@ -17,7 +17,7 @@ void test_add(ctest_ctx_t *ctx) {
   int got = a + b;
   int want = 42;
 
-  if (got != expect) {
+  if (got != want) {
     ctest_failf(ctx, "wanted %d, got %d", want, got);
   }
 }

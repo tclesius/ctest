@@ -1,11 +1,10 @@
 # ctest
 A tiny testing framework
+<img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/125211d3-916a-4821-b543-518f19f9c4cd" />
 
 - ~160 lines of C99
 - Zero-allocations
-- Fixtures
-- ANSI colored logs with timings
-- Neat summary
+- Fixtures Support
 
 ## Usage
 ctest is dead simple:
@@ -16,10 +15,10 @@ void test_add(ctest_ctx_t *ctx) {
   int a = 21, b = 21;
 
   int got = a + b;
-  int expect = 42;
+  int want = 42;
 
   if (got != expect) {
-    ctest_failf(ctx, "wanted %d, got %d", expect, got);
+    ctest_failf(ctx, "wanted %d, got %d", want, got);
   }
 }
 
